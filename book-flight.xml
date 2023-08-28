@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="book flih module">
+    <test verbose="2" preserve-order="true" name="C:/Users/rs66360/Desktop/Docker/selenium-docker">
+        <parameter name="noOfPassengers" value="1" />
+        <parameter name="expectedPrice" value="$584 USD" />
+        <classes>
+            <class name="newtours.tests.BookFlightTest">
+                <methods>
+                    <include name="registrationPage"/>
+                    <include name="registrationConfirmationPage"/>
+                    <include name="flightDetailsPage"/>
+                    <include name="findFlightPage"/>
+                    <include name="flightConfirmationPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

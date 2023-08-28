@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="search module Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/rs66360/Desktop/Docker/selenium-docker">
+        <parameter name="keyword" value="java" />
+        <classes>
+            <class name="searchmodules.tests.SearchTest">
+            </class>
+        </classes>
+    </test>
+</suite>
