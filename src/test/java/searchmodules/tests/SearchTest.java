@@ -1,5 +1,6 @@
 package searchmodules.tests;
 
+import base.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,18 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects_search.SearchPage;
 
-public class SearchTest  {
-
-    private WebDriver driver;
-
-    @BeforeTest
-    public void setupParameters(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-
-
+public class SearchTest extends BaseTest {
     @Test
     @Parameters({"keyword"})
     public void search(String keyword){

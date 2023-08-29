@@ -1,5 +1,6 @@
 package newtours.tests;
 
+import base.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,18 +9,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjetcs_newtoors.*;
 
-public class BookFlightTest  {
+public class BookFlightTest  extends BaseTest {
 
     private String noOfPassengers;
     private String expectedPrice;
-    private WebDriver driver;
 
     @BeforeTest
     @Parameters({"noOfPassengers", "expectedPrice"})
     public void setupParameters(String noOfPassengers, String expectedPrice){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
         this.noOfPassengers = noOfPassengers;
         this.expectedPrice = expectedPrice;
     }

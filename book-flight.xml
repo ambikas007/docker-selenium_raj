@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="book flih module">
+<suite name="book flih module" parallel="tests">
     <test verbose="2" preserve-order="true" name="C:/Users/rs66360/Desktop/Docker/selenium-docker">
         <parameter name="noOfPassengers" value="1" />
         <parameter name="expectedPrice" value="$584 USD" />
         <classes>
             <class name="newtours.tests.BookFlightTest">
-                <methods>
-                    <include name="registrationPage"/>
-                    <include name="registrationConfirmationPage"/>
-                    <include name="flightDetailsPage"/>
-                    <include name="findFlightPage"/>
-                    <include name="flightConfirmationPage"/>
-                </methods>
             </class>
         </classes>
+    </test>
+
+    <test name="book-flight-2">
+        <parameter name="noOfPassengers" value="2" />
+        <parameter name="expectedPrice" value="$1169  USD" />
+        <classes>
+            <class name="newtours.tests.BookFlightTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="book-flight-3">
+        <parameter name="noOfPassengers" value="3" />
+        <parameter name="expectedPrice" value="$1753 USD" />
+        <classes>
+            <class name="newtours.tests.BookFlightTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="book-flight-4">
+    <parameter name="noOfPassengers" value="4" />
+    <parameter name="expectedPrice" value="$2338 USD" />
+    <classes>
+        <class name="newtours.tests.BookFlightTest">
+        </class>
+    </classes>
     </test>
 </suite>
